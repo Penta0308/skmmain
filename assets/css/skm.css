@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&subset=korean');
+
+
+
+*{box-sizing:border-box;font-family:"Nanum Gothic"}
+html,body{width:100%;height:100%;overflow:auto;}
+.clearfix{clear:both;}
+#wrapper{width:100%;height:100%;overflow:auto;}
+.skmLogo{padding:10px}
+.skmLogo > a > img{width:170px;height:auto;}
+.header{width:100%;height:auto;}
+.navi{width:100%;height:auto;overflow:hidden;border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;}
+.navigator{width:100%;height:auto;overflow:hidden;margin:0;padding:0;list-style:none;}
+.navigator li{float:left;display:inline-block;width:calc(100% / 6);font-weight:bold;color:#4b4b4b;margin:0;}
+.navigator li:hover{background:#0E69B4;color:#fff;}
+.navigator li > a{text-decoration:hidden;display:block;position:relative;}
+.navigator li > a:hover{text-decoration:none;color:#fff;}
+.navigator li > a > span{display:block;width:100%;color:#333;height:50px;line-height:50px;position:relative;font-size:18px;letter-spacing:-0.5px;padding:0 30px;text-align:center;}
+.navigator li > a > span:hover{color:#fff;}
+.content{width:100%;height:auto;overflow:hidden;padding:10px 0px;font-size:.9em;}
+
+.main_banner{margin:0;padding:0;list-style:none;width:100%;height:auto;overflow:hidden;}
+.main_banner > li > img{width:100%;height:auto}
+
+.latest-skin{float:left;width:540px;padding:0px 15px;}
+.quick{float:right;width:540px;}
+.item-header{width:100%;height:auto;overflow:hidden;margin-bottom:20px;}
+.item-header > span{display:block;}
+.text-title{padding:5px 0px;float:left;font-size:1.5em;font-weight:bold;}
+.btn-more{float:right;padding:10px 15px;border:1px solid #eee;}
+.latest-skin > ul{list-style:none;margin:0;padding:0;}
+.latest-skin > ul > li{padding:2px 5px;color:#666;}
+.latest-skin > ul > li:first-child{padding:0px 5px 2px 5px;}
+.latest-skin > ul > li::before{content:"●";font-size:1px;margin-right:10px;color:#666;}
+.latest-skin > ul > li > a{display:inline-block;color:#666;}
+.latest-skin > ul > li > a:hover{text-decoration:none}
+.latest-skin > ul > li > span{float:right;}
+
+.quickmenu{list-style:none;margin:0;padding:0;}
+.quickmenu > li{float:left;display:inline-block;width:80px;height:100px;padding:10px 5px;margin-left:15px;font-size:.8em;border:1px solid #ccc;border-radius:4px;text-align:center}
+.quickmenu > li > img{width:auto;height:45px;margin-bottom:5px;word-break:break-all;}
+
+.subtitle{width:100%;height:auto;position:relative;margin-bottom:40px;border-bottom:1px solid #e1e1e1;text-align:center;padding:0 20px;}
+.sstitle{width:100%;height:auto;position:relative;margin-bottom:30px;border-bottom:1px solid #e1e1e1;text-align:center;padding:0 15px;}
+.text-pagetitle{margin:0;font-size:2em;color:#333;position:relative;display:inline-block;line-height:86px;letter-spacing:1px;padding:0px 25px;font-weight:bold}
+.text-pagetitle::before{display:block;content:"";position:absolute;bottom:-1px;left:0;width:100%;border-top:1px solid #0265B8;}
+.text-pagesstitle{margin:0;font-size:1.5em;color:#333;position:relative;display:inline-block;line-height:86px;letter-spacing:1px;padding:0px 20px;font-weight:bold}
+.text-pagesstitle::before{display:block;content:"";position:absolute;bottom:-1px;left:0;width:100%;border-top:1px solid #0265B8;}
+
+.statusTitle{font-size:1.5em;font-weight:normal;}
+.status_box{float:left;display:block;}
+.status_box:last-child{float:right;}
+
+.footer{width:100%;height:auto;overflow:hidden;border-top:1px solid #e6e6e6;padding:10px 0px;margin-top:10px;}
+.footer_menu{width:100%;height:auto;overflow:hidden;list-style:none;margin:0 auto;padding:0;}
+.footer_menu > li{display:inline-block;float:left;padding:10px 15px;font-size:1em;font-weight:bold;}
+
+.admin-pageTitle{display:block;}
+.admin-pageTitle::before{content:"●";margin-right:10px;}
+
+th{text-align:center;}
+th,td{height:40px;}
+.safe{background:#77CE2A;}
+.danger{background:#F92472;}
+td.company_id{width:40px;text-align:center;}
+td.company_name{width:220px;}
+td.company_year{width:60px;text-align:center;}
+td.company_performance{width:60px;text-align:center;}
+td.company_transport{width:70px;text-align:center;}
+td.company_money{width:160px;text-align:right;}
+td.company_security{width:60px;text-align:center;}
+
+td.chartnum{width:40px;text-align:center;}
+td.charttitle{width:320px;}
+td.chartdate{width:180px;text-align:center;}
+td.chartwriter{width:120px;text-align:center;}
+
+td.viewtitle{width:400px;text-align:right;font-size:1em;font-weight:bold;}
+
+tr.textview{height:auto;text-align:center;}
+
+.loginfrm{width:320px;text-align:right;}
+.loginlabel{width:80px;text-align:left;}
+
+.sbtn{width:165px;}
+
+.editor{width:720px;height:320px;border:none;}
+.editortitle{width:100%;height:30px;}
+
+.extendable{width:100%;}
+
+.manpage100{width:100%;}
+
+.resultheight{height:100px;}
