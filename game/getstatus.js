@@ -1,20 +1,24 @@
+var howmanytimes = 0;
+var arr = null;
+
 function listparse(b) {
 	var str = jQuery(b).find("a[href]").each(function(){
 		var a = $(this).attr("href");
-		if(a.substring(0, 1) == "?" || a.substring(0, 1) == "/" || a == "folder.txt") return;
-		console.log(a);
-		$.ajax({
-        type:"GET",
-        url:"http://skmttd.tk/xml/" + a,
-        dataType : "xml",
-        success: function(textdata){
-			console.log(textdata);
-			parsexmls(textdata, a);
-        },
-        error: function(xhr, status, error) {
-            alert(error);
-        }  
-    });
+			if(a.substring(0, 1) == "?" || a.substring(0, 1) == "/" || a == "folder.txt") return;
+			console.log(a);
+			$.ajax({
+			type:"GET",
+			url:"http://skmttd.tk/xml/" + a,
+			dataType : "xml",
+			success: function(textdata){
+				console.log(textdata);
+				parsexmls(textdata, a);
+				howmanytimes++;
+			},
+			error: function(xhr, status, error) {
+				alert(error);
+			}  
+		});
 	});
 }
 $(function() {
@@ -25,6 +29,7 @@ $(function() {
         success: function(textdata){
 			$(".folders").after(textdata);
 			listparse(textdata);
+			arr = new Array(howmanytimes);
         },
         error: function(xhr, status, error) {
             alert(error);
@@ -38,7 +43,6 @@ $(function() {
         success: function(textdata){
 			$("#loading").remove();
             console.log(textdata);
-//			parsexmls(textdata);
         },
         error: function(xhr, status, error) {
             alert(error);
@@ -51,9 +55,9 @@ function parsexmls(xml, tstamp) {
 		$(this).find("result[cmd=\"server_info\"]").each(function() {
 			if($("#sname").text()=="") $("#sname").append( $(this).text());
 		});
-		$(this).find("result[cmd=\"companies\"]").each(function(){
+		$(this).find("result[cmd=\"companies\"]").each(function(a, b){
 			var theDate = new Date(tstamp * 1000);
-			$("#companies").append("<li>" + theDate.toGMTString() + $(this).text() + "</li>\n");
+			$("#companies").append("<li>" + theDate.toGMTString() + JQuery(b).text() + "</li>\n");
 		});
 	});
 }
