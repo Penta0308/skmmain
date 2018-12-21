@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="assets/vendor/flexslider/flexslider.css">
 	<script src="assets/script/jquery-3.3.1.min.js"></script>
 	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/charts/loader.js"></script>
 	<script src="assets/script/modernizr-custom.js"></script>
 	<script src="assets/vendor/bxslider/jquery.bxslider.min.js"></script>
 	<script src="assets/vendor/flexslider/jquery.flexslider-min.js"></script>
