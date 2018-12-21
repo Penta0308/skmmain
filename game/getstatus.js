@@ -11,7 +11,6 @@ function listparse(b) {
 			url:"http://skmttd.tk/xml/" + a,
 			dataType : "xml",
 			success: function(textdata){
-//				console.log(textdata);
 				abuf = [];
 				parsexmls(textdata, a.replace(/[^0-9\.]+/g, ""));
 				arr.push(abuf);
@@ -30,6 +29,7 @@ $(function() {
         success: function(textdata){
 			$(".folders").append(textdata);
 			listparse(textdata);
+			console.log(arr);
         },
         error: function(xhr, status, error) {
             alert(error);
@@ -60,9 +60,7 @@ function parsexmls(xml, tstamp) {
 		$(this).find("result[cmd=\"companies\"]").each(function(a, b){
 			abuf[1]++;
 			abuf.push(jQuery(b).text());
-			//$("#companies").append("<li>" + theDate.toGMTString() + jQuery(b).text() + "</li>\n");
 		});
 	});
-	console.log(abuf);
 	arr.push(abuf);
 }
