@@ -11,7 +11,7 @@ function listparse(b) {
 			url:"http://skmttd.tk/xml/" + a,
 			dataType : "xml",
 			success: function(textdata){
-				console.log(textdata);
+//				console.log(textdata);
 				abuf = [];
 				parsexmls(textdata, a.replace(/[^0-9\.]+/g, ""));
 				arr.push(abuf);
