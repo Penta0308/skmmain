@@ -55,7 +55,7 @@ function parsexmls(xml, tstamp) {
 		});
 		$(this).find("result[cmd=\"companies\"]").each(function(a, b){
 			var theDate = new Date(tstamp * 1000);
-			$("#companies").append("<li>" + theDate.toGMTString() + JQuery(b).text() + "</li>\n");
+			$("#companies").append("<li>" + theDate.toGMTString() + jQuery(b).text() + "</li>\n");
 		});
 	});
 }
