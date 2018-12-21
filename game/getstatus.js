@@ -1,4 +1,5 @@
 var arr = [];
+var abuf = null;
 
 function listparse(b) {
 	var str = jQuery(b).find("a[href]").each(function(){
@@ -11,8 +12,9 @@ function listparse(b) {
 			dataType : "xml",
 			success: function(textdata){
 				console.log(textdata);
+				abuf = [];
 				parsexmls(textdata, a.replace(/[^0-9\.]+/g, ""));
-				arr = arr.concat(new Array(1));
+				arr.push(abuf);
 			},
 			error: function(xhr, status, error) {
 				alert(error);
@@ -40,7 +42,6 @@ $(function() {
         dataType : "xml",
         success: function(textdata){
 			$("#loading").remove();
-            console.log(textdata);
         },
         error: function(xhr, status, error) {
             alert(error);
@@ -53,9 +54,16 @@ function parsexmls(xml, tstamp) {
 		$(this).find("result[cmd=\"server_info\"]").each(function() {
 			if($("#sname").text()=="") $("#sname").append( $(this).text());
 		});
+		abuf[0] = 0;
+		abuf[1] = 0;
 		$(this).find("result[cmd=\"companies\"]").each(function(a, b){
 			var theDate = new Date(tstamp * 1000);
-			$("#companies").append("<li>" + theDate.toGMTString() + jQuery(b).text() + "</li>\n");
+			abuf[0] = theDate.toGMTString();
+			abuf[1] = a - 1;
+			abuf.push(jQuery(b).text());
+			//$("#companies").append("<li>" + theDate.toGMTString() + jQuery(b).text() + "</li>\n");
 		});
 	});
+	console.log(abuf);
+	arr.push(abuf);
 }
