@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="assets/vendor/flexslider/flexslider.css">
 	<script src="assets/script/jquery-3.3.1.min.js"></script>
 	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script>function alertnotready(){alert("준비중입니다");};</script>
 	<script src="assets/script/modernizr-custom.js"></script>
 	<script src="assets/vendor/bxslider/jquery.bxslider.min.js"></script>
 	<script src="assets/vendor/flexslider/jquery.flexslider-min.js"></script>
@@ -84,7 +83,7 @@
 				</div>
 				<div class="clearfix"></div>
 				<ul class="quickmenu">
-					<li><img src="assets/image/Openttdlogo.svg"><a href="javascript:alertnotready();">OpenTTD<br/>다운로드</a></li>
+					<li><img src="assets/image/Openttdlogo.svg"><a href="/assets/OpenTTDInstaller_25.2.1.msi">OpenTTD<br/>다운로드</a></li>
 					<li><img src="assets/image/talklogo.svg"><a href="https://open.kakao.com/o/gwid9bZ"><br/>오픈채팅방</a></li>
 					<li><img src="assets/image/ss.svg"><a href="game/status.html"><br/>서버<br/>운영상황</a></li>
 				</ul>
