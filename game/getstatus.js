@@ -11,7 +11,7 @@ function listparse(b) {
 			dataType : "xml",
 			success: function(textdata){
 				console.log(textdata);
-				parsexmls(textdata, (a.split('-')[1].)split('.')[0]);
+				parsexmls(textdata, a.replace(/[^0-9\.]+/g, ""));
 				arr = arr.concat(new Array(1));
 			},
 			error: function(xhr, status, error) {
