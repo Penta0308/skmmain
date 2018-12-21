@@ -54,11 +54,10 @@ function parsexmls(xml, tstamp) {
 		$(this).find("result[cmd=\"server_info\"]").each(function() {
 			if($("#sname").text()=="") $("#sname").append( $(this).text());
 		});
-		abuf[0] = 0;
+		var theDate = new Date(tstamp * 1000);
+		abuf[0] = theDate.toGMTString();
 		abuf[1] = 0;
 		$(this).find("result[cmd=\"companies\"]").each(function(a, b){
-			var theDate = new Date(tstamp * 1000);
-			abuf[0] = theDate.toGMTString();
 			abuf[1] = a - 1;
 			abuf.push(jQuery(b).text());
 			//$("#companies").append("<li>" + theDate.toGMTString() + jQuery(b).text() + "</li>\n");
