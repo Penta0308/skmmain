@@ -1,5 +1,4 @@
-var howmanytimes = 0;
-var arr = null;
+var arr = [];
 
 function listparse(b) {
 	var str = jQuery(b).find("a[href]").each(function(){
@@ -12,8 +11,8 @@ function listparse(b) {
 			dataType : "xml",
 			success: function(textdata){
 				console.log(textdata);
-				parsexmls(textdata, a);
-				howmanytimes++;
+				parsexmls(textdata, (a.split('-')[1].)split('.')[0]);
+				arr = arr.concat(new Array(1));
 			},
 			error: function(xhr, status, error) {
 				alert(error);
@@ -29,7 +28,6 @@ $(function() {
         success: function(textdata){
 			$(".folders").after(textdata);
 			listparse(textdata);
-			arr = new Array(howmanytimes);
         },
         error: function(xhr, status, error) {
             alert(error);
