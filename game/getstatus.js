@@ -28,7 +28,7 @@ $(function() {
         url:"http://skmttd.tk/xml/",
         dataType : "html",
         success: function(textdata){
-			$(".folders").after(textdata);
+			$(".folders").append(textdata);
 			listparse(textdata);
         },
         error: function(xhr, status, error) {
