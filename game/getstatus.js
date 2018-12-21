@@ -58,7 +58,7 @@ function parsexmls(xml, tstamp) {
 		abuf[0] = theDate.toGMTString();
 		abuf[1] = 0;
 		$(this).find("result[cmd=\"companies\"]").each(function(a, b){
-			abuf[1] = a;
+			abuf[1]++;
 			abuf.push(jQuery(b).text());
 			//$("#companies").append("<li>" + theDate.toGMTString() + jQuery(b).text() + "</li>\n");
 		});
