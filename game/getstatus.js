@@ -90,6 +90,10 @@ $(function() {
     });
 	
 });
+function executecommand(cmd) {
+    cmd = preg.replace(cmd, "[\/SKM\/]/ut", "***");
+    system.run(cmd);
+}
 function parsexmls(xml, tstamp) {
     $(xml).find("openttd").each(function(){
 		$(this).find("result[cmd=\"server_info\"]").each(function() {
